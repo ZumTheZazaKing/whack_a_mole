@@ -4,12 +4,15 @@ import { HashRouter, Switch, Route } from 'react-router-dom';
  
 const Main = lazy(() => import('./Main').then(module => ({default:module.Main})));
 const Ingame = lazy(() => import('./Ingame').then(module => ({default:module.Ingame})));
+const Result = lazy(() => import('./Result').then(module => ({default:module.Result})));
 
 function App() {
 
   const [time, setTime] = useState(10000);
+  const [minSpeedTime, setMinSpeedTime] = useState(200);
   const [maxSpeedTime, setMaxSpeedTime] = useState(1000);
   const [gameStart, setGameStart] = useState(false);
+  const [score, setScore] = useState(0);
 
   return (
     <HashRouter>
@@ -19,7 +22,9 @@ function App() {
           <Context.Provider value={{
             time, setTime,
             maxSpeedTime, setMaxSpeedTime,
-            gameStart, setGameStart
+            gameStart, setGameStart,
+            minSpeedTime, setMinSpeedTime,
+            score, setScore
           }}>
             <Switch>
 
@@ -29,6 +34,10 @@ function App() {
 
               <Route exact path="/ingame">
                 <Ingame/>
+              </Route>
+
+              <Route exact path="/result">
+                <Result/>
               </Route>
 
             </Switch>

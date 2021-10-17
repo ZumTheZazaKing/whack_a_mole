@@ -8,11 +8,21 @@ body{
     .App{
         #Ingame{
             #Moles{
+                width: 60%;
                 display: grid;
+                margin-left: auto;
+                margin-right: auto;
                 grid-template-columns: auto auto auto;
                 .mole{
                     border: 1px solid black;
                     text-align: center;
+                    .inner{
+                        padding: 20px;
+                        margin: 20px;
+                        width: 50px;
+                        height: 80px;
+                        background-color: black;
+                    }
                 }
             }
         }

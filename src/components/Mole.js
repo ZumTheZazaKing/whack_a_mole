@@ -1,5 +1,7 @@
-export function Mole(props){
+import { forwardRef } from "react"
+
+export const Mole = forwardRef((props, ref) => {
     return (<div className="mole">
-            <h2 className="hidden" onClick={e => props.bonk(e)}>Mole</h2>
+            <div ref={ref} className="inner hidden" onClick={e => props.bonk(e)}></div>
     </div>)
-}
+})
