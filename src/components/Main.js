@@ -14,7 +14,8 @@ export function Main(){
     }
 
     return (<div id="Main">
-        <h1>Main</h1>
+        <h1>Whack-A-Mole!</h1>
+        <br/>
         <button onClick={() => startGame()}>Start</button>
     </div>)
 }

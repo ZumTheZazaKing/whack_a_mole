@@ -72,12 +72,11 @@ export function Ingame(){
 
     const bonk = e => {
         e.target.className += " hidden";
-        console.log("Hit!");
         setScore(score++);
     }
 
     return (<div id="Ingame">
-        <p>Score: {score}</p>
+        <p id="score">Score: {score}</p>
         <div id="Moles">
             { moleRefs && moleRefs.map((moleRef,i) => <Mole ref={moleRefs[i]} bonk={bonk} key={i} moleNumber={i}/>)}
         </div>

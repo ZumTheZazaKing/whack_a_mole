@@ -1,12 +1,44 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body{
     background-color: burlywood;
 
     .App{
+
+        #Main{
+            border: 1px solid black;
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            padding: 20px 10px;
+            text-align: center;
+            button{
+                padding: 10px 20px;
+                font-size: 20px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                background-color: rgb(38, 122, 231);
+                color: white;
+                cursor: pointer;
+            }
+        }
+
         #Ingame{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            #score{
+                font-size: 24px;
+                margin: 20px;
+                font-weight: bold;
+            }
             #Moles{
                 width: 60%;
                 display: grid;
@@ -14,21 +46,72 @@ body{
                 margin-right: auto;
                 grid-template-columns: auto auto auto;
                 .mole{
-                    border: 1px solid black;
                     text-align: center;
+                    background: url(../images/dirt.png) no-repeat bottom center;
+                    background-size: 100%;
+                    height: 200px;
+                    width: 150px;
                     .inner{
-                        padding: 20px;
-                        margin: 20px;
-                        width: 50px;
-                        height: 80px;
+                        width: 100%;
+                        height: 100%;
                         background-color: black;
+                        transition: .2s ease-in;
+                        background:url(../images/mole.png) no-repeat bottom center;
+                        background-size: 100%;
+                        cursor: pointer;
                     }
                 }
+            }
+        }
+
+        #Result{
+            border: 1px solid black;
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            button{
+                padding: 10px 20px;
+                font-size: 20px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+            }
+            #playAgain{
+                background-color: rgb(38, 122, 231);
+            }
+            #return{
+                background-color: crimson;
             }
         }
     }
 }
 
 .hidden{
-   transform: translateY(35px)
+   transform: translateY(35px);
+   opacity:0;
+   visibility: hidden;
+}
+
+
+@media only screen and (max-width: 800px){
+    .App{
+        #Main{
+            width: 90% !important;
+        }
+        #Ingame{
+            .mole{
+                height: 125px !important;
+                width: 75px !important;
+            }
+        }
+        #Result{
+            width: 90% !important;
+        }
+    }
 }

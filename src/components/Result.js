@@ -25,7 +25,9 @@ export function Result(){
 
     return (<div id="Result">
         <h2>Score: {score}</h2>
-        <button onClick={() => playAgain()}>Play Again</button>
-        <button onClick={() => returnToMain()}>Return to Menu</button>
+        <br/>
+        <button id="playAgain" onClick={() => playAgain()}>Play Again</button>
+        <br/><br/>
+        <button id="return" onClick={() => returnToMain()}>Return to Menu</button>
     </div>)
 }

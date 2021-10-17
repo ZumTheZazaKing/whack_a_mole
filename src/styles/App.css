@@ -1,9 +1,41 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: burlywood;
+}
+body .App #Main {
+  border: 1px solid black;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding: 20px 10px;
+  text-align: center;
+}
+body .App #Main button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #267ae7;
+  color: white;
+  cursor: pointer;
+}
+body .App #Ingame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .App #Ingame #score {
+  font-size: 24px;
+  margin: 20px;
+  font-weight: bold;
 }
 body .App #Ingame #Moles {
   width: 60%;
@@ -13,19 +45,64 @@ body .App #Ingame #Moles {
   grid-template-columns: auto auto auto;
 }
 body .App #Ingame #Moles .mole {
-  border: 1px solid black;
   text-align: center;
+  background: url(../images/dirt.png) no-repeat bottom center;
+  background-size: 100%;
+  height: 200px;
+  width: 150px;
 }
 body .App #Ingame #Moles .mole .inner {
-  padding: 20px;
-  margin: 20px;
-  width: 50px;
-  height: 80px;
+  width: 100%;
+  height: 100%;
   background-color: black;
+  transition: 0.2s ease-in;
+  background: url(../images/mole.png) no-repeat bottom center;
+  background-size: 100%;
+  cursor: pointer;
+}
+body .App #Result {
+  border: 1px solid black;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+body .App #Result button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+body .App #Result #playAgain {
+  background-color: #267ae7;
+}
+body .App #Result #return {
+  background-color: crimson;
 }
 
 .hidden {
   transform: translateY(35px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 800px) {
+  .App #Main {
+    width: 90% !important;
+  }
+  .App #Ingame .mole {
+    height: 125px !important;
+    width: 75px !important;
+  }
+  .App #Result {
+    width: 90% !important;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */
