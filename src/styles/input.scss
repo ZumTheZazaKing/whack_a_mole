@@ -90,6 +90,11 @@ body{
             h2{
                 margin: 0;
             }
+            h3{
+                span{
+                    color: orange;
+                }
+            }
             button{
                 padding: 10px 20px;
                 font-size: 20px;
@@ -113,6 +118,10 @@ body{
    transform: translateY(35px);
    opacity:0;
    visibility: hidden;
+}
+
+.hide{
+    display: none;
 }
 
 

@@ -86,6 +86,9 @@ body .App #Result {
 body .App #Result h2 {
   margin: 0;
 }
+body .App #Result h3 span {
+  color: orange;
+}
 body .App #Result button {
   padding: 10px 20px;
   font-size: 20px;
@@ -106,6 +109,10 @@ body .App #Result #return {
   transform: translateY(35px);
   opacity: 0;
   visibility: hidden;
+}
+
+.hide {
+  display: none;
 }
 
 @media only screen and (max-width: 800px) {

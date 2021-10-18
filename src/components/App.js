@@ -15,6 +15,8 @@ function App() {
   const [gameStart, setGameStart] = useState(false);
   const [score, setScore] = useState(0);
 
+  const [highScore, setHighScore] = useState(JSON.parse(localStorage.getItem("highscore")) || 0);
+
   const bgRef = useRef();
 
   return (
@@ -28,7 +30,8 @@ function App() {
             gameStart, setGameStart,
             minSpeedTime, setMinSpeedTime,
             score, setScore,
-            bgRef
+            bgRef,
+            highScore, setHighScore
           }}>
             <Switch>
 
