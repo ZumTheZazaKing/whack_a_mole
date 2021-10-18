@@ -15,6 +15,7 @@ export function Result(){
         if(score > highScore){
             highscoreNotiRef.current.className = "";
             localStorage.setItem("highscore", JSON.stringify(score));
+            setHighScore(JSON.parse(localStorage.getItem("highscore")));
         }
     },[])
 
@@ -31,7 +32,7 @@ export function Result(){
 
     return (<div id="Result">
         <h2>Score: {score}</h2>
-        <h3>High Score: {highScore > score ? highScore : score} <span className="hide" ref={highscoreNotiRef}>NEW</span></h3>
+        <h3>High Score: {highScore} <span className="hide" ref={highscoreNotiRef}>NEW</span></h3>
         <br/>
         <button id="playAgain" onClick={() => playAgain()}>Play Again</button>
         <br/><br/>
