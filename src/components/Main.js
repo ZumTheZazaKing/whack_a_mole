@@ -4,13 +4,14 @@ import { Context } from '../data/context';
 
 export function Main(){
 
-    let { setGameStart } = useContext(Context);
+    let { setGameStart, bgRef } = useContext(Context);
 
     const history = useHistory();
 
     const startGame = () => {
         history.push("/ingame");
-        setGameStart(true)
+        setGameStart(true);
+        bgRef.current.play();
     }
 
     return (<div id="Main">

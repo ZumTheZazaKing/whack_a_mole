@@ -1,11 +1,11 @@
 import { Mole } from "./Mole";
-import { useEffect, useContext, useState, useRef } from 'react';
+import { useEffect, useContext, useRef } from 'react';
 import { Context } from "../data/context";
 import { useHistory } from 'react-router-dom';
 
 export function Ingame(){
 
-    let { gameStart, setGameStart, time, minSpeedTime, maxSpeedTime, score, setScore } = useContext(Context);
+    let { gameStart, time, minSpeedTime, maxSpeedTime, score, setScore } = useContext(Context);
 
     const history = useHistory();
 
@@ -22,6 +22,7 @@ export function Ingame(){
     const mole8 = useRef();
 
     let moleRefs = [mole0, mole1, mole2, mole3, mole4, mole5, mole6, mole7, mole8];
+
 
     //Check out gameStart for return
     useEffect(() => {
